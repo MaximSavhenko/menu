@@ -1,23 +1,89 @@
 .primary-menu {
-    &-container {
-        position: absolute;
-        top: 109px;
-        left: 0;
-    }
+  &-container {
+    position: absolute;
+    top: 109px;
+    left: 0;
+    width: 85%;
+  }
 
-    &-wrapper {
-        .secondary{
-            &-menu {
-                ul {
-                    li {
-                        padding: 15px;
-                        border-bottom: 1px solid #00A2B1;
-                    }
-                }
+  &-wrapper {
+    display: none;
+    &.open {
+        display: block;
+    }
+    .secondary {
+      &-menu {
+        width: 100%;
+        max-width: 205px;
+        background-color: #fff;
+        box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.95);
+        height: calc(100vh - 108px);
+
+        &-link {
+          padding: 15px;
+          border-bottom: 1px solid #00a2b1;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: relative;
+          transition: all 0.2s;
+
+          &:hover {
+            background-color: #66bfcd;
+            &::after {
+              background-color: #fff;
             }
-            &-submenu {
-                
+            &:before {
+              border-top-color: #66bfcd;
+            }
+            a {
+              color: #fff;
+            }
+          }
+
+          &:after {
+            content: "";
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-color: #66bfcd;
+            border-radius: 50%;
+          }
+          &:before {
+            content: "";
+            display: block;
+            content: "";
+            position: absolute;
+            right: 15px;
+            border: 7px solid transparent;
+            border-top: 10px solid #fff;
+            transform: rotate(-90deg);
+          }
+          a {
+            font-size: 13px;
+            color: #00a2b1;
+            line-height: 1.07;
+          }
+        }
+      }
+
+      &-submenu {
+        position: absolute;
+        top: 0;
+        right: -205px;
+        width: 100%;
+        max-width: 205px;
+        height: calc(100vh - 108px);
+        background-color: #66bfcd;
+        box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.95);
+
+        li {
+            padding: 15px 15px 15px 19px;
+            a {
+                color: #fff;
             }
         }
+      }
     }
+  }
 }
