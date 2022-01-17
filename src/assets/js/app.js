@@ -1,8 +1,6 @@
-// js for burger
 function burger() {
   let btnMenu = document.querySelector(".header__btn-menu"),
-    burger = document.querySelector(".primary-menu-wrapper");
-  // navbar = header.querySelector(".navbar-mobile");
+    burger = document.querySelector(".primary-menu-container");
 
   btnMenu.onclick = function () {
     document.body.classList.toggle("overflow");
@@ -12,3 +10,36 @@ function burger() {
 }
 
 burger();
+
+function subMenu() {
+  let menuLink = document.getElementsByClassName("secondary-menu-link");
+
+  for (let i = 0; i < menuLink.length; i++) {
+    if (menuLink[i].children.length == 1) {
+      menuLink[i].classList.add("empty");
+    }
+  }
+  document.getElementById("nav").onmouseover = function (event) {
+    let target = event.target;
+    then = target.className == "secondary-menu-link";
+
+    function closeMenu() {
+      let menu = document.getElementById("nav");
+      let subm = document.getElementsByClassName("secondary-submenu");
+      if (menu) {
+        for (let i = 0; i < subm.length; i++) {
+          subm[i].classList.remove("open");
+        }
+      }
+    }
+
+    if (then) {
+      let subMenu = target.getElementsByClassName("secondary-submenu");
+
+      closeMenu();
+      subMenu[0].classList.add("open");
+    }
+  };
+}
+
+subMenu();

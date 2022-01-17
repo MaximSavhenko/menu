@@ -1,13 +1,12 @@
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 109px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 109px);
 
-    &__wrapp {
-        h1 {
-            text-align: center;
-        }
+  &__wrapp {
+    h1 {
+      text-align: center;
     }
+  }
 }
-
