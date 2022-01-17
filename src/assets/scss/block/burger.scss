@@ -100,8 +100,8 @@
       }
 
       &-submenu {
+        display: none;
         @include b(991) {
-          display: none;
           position: absolute;
           top: 0;
           right: -149px;
