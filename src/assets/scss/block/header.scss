@@ -1,57 +1,61 @@
 .header {
   padding: 22px 0;
   .toggleMenu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    position: relative;
-    span {
-      @include trs;
-      width: 24px;
-      height: 3px;
-      background-color: #66bfcd;
-      display: block;
-      margin-bottom: 5px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      @include b(500) {
-        width: 30px;
-        height: 2px;
-      }
-    }
-
-    &.open {
-      p {
-        margin: auto 0;
-        width: 60px;
-        height: 40px;
-        position: relative;
-      }
+    display: none;
+    @include b(991) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      position: relative;
       span {
-        position: absolute;
-        top: 0;
-        left: 0;
+        @include trs;
         width: 24px;
-
-        &:nth-child(1) {
-          top: 18px;
-          transform: rotate(-45deg);
-          background-color: #4ec4c0;
+        height: 3px;
+        background-color: #66bfcd;
+        display: block;
+        margin-bottom: 5px;
+        &:last-child {
+          margin-bottom: 0;
         }
-
-        &:nth-child(2) {
-          display: none;
+        @include b(500) {
+          width: 30px;
+          height: 2px;
         }
-
-        &:nth-child(3) {
-          top: 18px;
-          transform: rotate(45deg);
-          background-color: #4ec4c0;
+      }
+  
+      &.open {
+        p {
+          margin: auto 0;
+          width: 60px;
+          height: 40px;
+          position: relative;
+        }
+        span {
+          position: absolute;
+          top: 0;
+          left: 10px;
+          width: 24px;
+  
+          &:nth-child(1) {
+            top: 18px;
+            transform: rotate(-45deg);
+            background-color: #4ec4c0;
+          }
+  
+          &:nth-child(2) {
+            display: none;
+          }
+  
+          &:nth-child(3) {
+            top: 18px;
+            transform: rotate(45deg);
+            background-color: #4ec4c0;
+          }
         }
       }
     }
+    
   }
 
   &__wrapp {
