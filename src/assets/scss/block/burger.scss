@@ -1,35 +1,38 @@
 .primary-menu {
-  
   &-container {
-    display: none;
-    position: fixed;
-    top: 109px;
-    left: -599px;
-    width: 100%;
-    max-width: 412px;
-    height: 100%;
     transition: left 0.4s ease-in-out;
 
     @include b(991) {
-      display: block;
+      position: fixed;
+      top: 109px;
+      left: -599px;
+      width: 100%;
+      max-width: 412px;
+      height: 100%;
     }
 
     &.open {
-      left: 0;
+      @include b(991) {
+        left: 0;
+      }
     }
   }
 
   &-wrapper {
-    width: 100%;
-    height: 100%;
+    @include b(991) {
+      width: 100%;
+      height: 100%;
+    }
     .secondary {
       &-menu {
-        width: 205px;
-        background-color: #fff;
-        box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.95);
-        height: calc(100vh - 108px);
-        position: relative;
-        z-index: 5;
+        @include b(991) {
+          width: 205px;
+          background-color: #fff;
+          box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.95);
+          height: calc(100vh - 108px);
+          position: relative;
+          z-index: 5;
+        }
 
         ul {
           li {
@@ -38,81 +41,85 @@
         }
 
         &-link {
-          padding: 15px;
-          border-bottom: 1px solid #00a2b1;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          transition: all 0.2s;
+          @include b(991) {
+            padding: 15px;
+            border-bottom: 1px solid #00a2b1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s;
 
-          &:hover {
-            background-color: #66bfcd;
-            &::after {
-              background-color: #fff;
-            }
-            &:before {
-              border-top-color: #66bfcd;
-            }
-            a {
-              color: #fff;
-            }
-          }
-
-          &:after {
-            content: "";
-            display: block;
-            width: 24px;
-            height: 24px;
-            background-color: #66bfcd;
-            border-radius: 50%;
-          }
-          &:before {
-            content: "";
-            display: block;
-            content: "";
-            position: absolute;
-            right: 15px;
-            border: 7px solid transparent;
-            border-top: 10px solid #fff;
-            transform: rotate(-90deg);
-          }
-
-          &.empty {
-            &:before {
-              display: none;
+            &:hover {
+              background-color: #66bfcd;
+              &::after {
+                background-color: #fff;
+              }
+              &:before {
+                border-top-color: #66bfcd;
+              }
+              a {
+                color: #fff;
+              }
             }
 
             &:after {
-              display: none;
+              content: "";
+              display: block;
+              width: 24px;
+              height: 24px;
+              background-color: #66bfcd;
+              border-radius: 50%;
             }
-          }
-          a {
-            font-size: 13px;
-            color: #00a2b1;
-            line-height: 1.07;
+            &:before {
+              content: "";
+              display: block;
+              content: "";
+              position: absolute;
+              right: 15px;
+              border: 7px solid transparent;
+              border-top: 10px solid #fff;
+              transform: rotate(-90deg);
+            }
+
+            &.empty {
+              &:before {
+                display: none;
+              }
+
+              &:after {
+                display: none;
+              }
+            }
+            a {
+              font-size: 13px;
+              color: #00a2b1;
+              line-height: 1.07;
+            }
           }
         }
       }
 
       &-submenu {
-        display: none;
-        position: absolute;
-        top: 0;
-        right: -149px;
-        width: 100%;
-        max-width: 149px;
-        height: calc(100vh - 108px);
-        background-color: #66bfcd;
-        box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.95);
+        @include b(991) {
+          display: none;
+          position: absolute;
+          top: 0;
+          right: -149px;
+          width: 100%;
+          max-width: 149px;
+          height: calc(100vh - 108px);
+          background-color: #66bfcd;
+          box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.95);
 
-        &.open {
-          display: block;
-        }
+          &.open {
+            display: block;
+          }
 
-        li {
-          padding: 15px 15px 15px 19px;
-          a {
-            color: #fff;
+          li {
+            padding: 15px 15px 15px 19px;
+            a {
+              color: #fff;
+            }
           }
         }
       }

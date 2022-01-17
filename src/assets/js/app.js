@@ -11,19 +11,19 @@ function burger() {
 burger();
 
 function subMenu() {
-  let menuLink = document.getElementsByClassName("secondary-menu-link");
+  let menuLink = document.getElementsByClassName("secondary-menu-link"),
+      menu = document.getElementById("block-mainnavigationwithentertainmentguide-2");
 
   for (let i = 0; i < menuLink.length; i++) {
     if (menuLink[i].children.length == 1) {
       menuLink[i].classList.add("empty");
     }
   }
-  document.getElementById("nav").onmouseover = function (event) {
+  menu.onmouseover = function (event) {
     let target = event.target;
     then = target.className == "secondary-menu-link";
 
     function closeMenu() {
-      let menu = document.getElementById("nav");
       let subm = document.getElementsByClassName("secondary-submenu");
       if (menu) {
         for (let i = 0; i < subm.length; i++) {
