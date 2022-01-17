@@ -3,7 +3,6 @@ function burger() {
     burger = document.querySelector(".primary-menu-container");
 
   btnMenu.onclick = function () {
-    document.body.classList.toggle("overflow");
     btnMenu.classList.toggle("open");
     burger.classList.toggle("open");
   };
