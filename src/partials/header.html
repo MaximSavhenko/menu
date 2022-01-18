@@ -1,14 +1,44 @@
-<header class="header">
-    <div class="header__wrapp">
-        <div class="header__logo">
-            <img src="assets/images/index/logo.png" alt="logo">
+<div class="mobile-number-menu-container">
+    <div class="mobile-menu-region">
+        <div id="block-entertainment-branding">
+            <div class="brand-wrapper"> <a href="/" title="Home" rel="home"> <img
+                        src="assets/images/index/logo.png" alt="Home"> </a></div>
         </div>
-        <div class="header__btn-menu toggleMenu">
-            <p>
-                <span></span>
-                <span></span>
-                <span></span>
-            </p>
+        <div class="views-exposed-form" data-drupal-selector="views-exposed-form-artist-search-page-1"
+            id="block-exposedformartist-searchpage-2">
+            <form action="/artist-search" method="get" id="views-exposed-form-artist-search-page-1" accept-charset="UTF-8"
+                data-drupal-form-fields="edit-search-api-fulltext--2">
+                <div
+                    class="js-form-item form-item js-form-type-search-api-autocomplete form-item-search-api-fulltext js-form-item-search-api-fulltext">
+                    <label for="edit-search-api-fulltext--2">SEARCH ARTIST / KEYWORD</label> <input
+                        data-drupal-selector="edit-search-api-fulltext" data-search-api-autocomplete-search="artist_search"
+                        class="form-autocomplete form-text ui-autocomplete-input"
+                        data-autocomplete-path="/search_api_autocomplete/artist_search?display=page_1&amp;&amp;filter=search_api_fulltext"
+                        type="text" id="edit-search-api-fulltext--2" name="search_api_fulltext" value="" size="30"
+                        maxlength="128" autocomplete="off"></div>
+                <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper"
+                    id="edit-actions--2"><input data-drupal-selector="edit-submit-artist-search-2" type="submit"
+                        id="edit-submit-artist-search--2" value="SEARCH" class="button js-form-submit form-submit"></div>
+            </form>
+        </div>
+        <div id="block-togglesearch">
+            <div><button class="toggleSearch closed"><i class="fas fa-search"></i><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+        <div id="block-emailbutton">
+            <div><a class="email" href="mailto:info@musicandbands.co.uk"><i class="fas fa-envelope"></i></a></div>
+        </div>
+        <div id="block-phonenumber">
+            <div><a class="phone" href="tel:02037934042"><i class="fas fa-phone">&nbsp;</i></a>
+                <div class="phone-number-container">0203 7934042</div>
+            </div>
+        </div>
+        <div id="block-drawermenubutton">
+            <div class="header__btn-menu">
+                <button class="toggleMenu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </div>
-</header>
+</div>

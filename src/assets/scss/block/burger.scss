@@ -1,126 +1,114 @@
-.primary-menu {
-  &-container {
-    transition: left 0.4s ease-in-out;
-
+.mobile-menu {
+  transition: left 0.4s ease-in-out;
+  @include b(991) {
+    position: fixed;
+    top: 109px;
+    left: -599px;
+    width: 100%;
+    max-width: 412px;
+    height: 100%;
+  }
+  &.open {
     @include b(991) {
-      position: fixed;
-      top: 109px;
-      left: -599px;
-      width: 100%;
-      max-width: 412px;
-      height: 100%;
+      left: 0;
+    }
+  }
+
+  &__wrapp {
+    @include b(991) {
+      width: 205px;
+      background-color: #fff;
+      box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.95);
+      height: calc(100vh - 108px);
+      position: relative;
+      z-index: 5;
     }
 
-    &.open {
-      @include b(991) {
-        left: 0;
+    ul {
+      li {
+        cursor: pointer;
       }
     }
   }
 
-  &-wrapper {
+  &__link {
     @include b(991) {
-      width: 100%;
-      height: 100%;
-    }
-    .secondary {
-      &-menu {
-        @include b(991) {
-          width: 205px;
+      padding: 15px;
+      border-bottom: 1px solid #00a2b1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: #66bfcd;
+        &::after {
           background-color: #fff;
-          box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.95);
-          height: calc(100vh - 108px);
-          position: relative;
-          z-index: 5;
         }
-
-        ul {
-          li {
-            cursor: pointer;
-          }
+        &:before {
+          border-top-color: #66bfcd;
         }
-
-        &-link {
-          @include b(991) {
-            padding: 15px;
-            border-bottom: 1px solid #00a2b1;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: all 0.2s;
-
-            &:hover {
-              background-color: #66bfcd;
-              &::after {
-                background-color: #fff;
-              }
-              &:before {
-                border-top-color: #66bfcd;
-              }
-              a {
-                color: #fff;
-              }
-            }
-
-            &:after {
-              content: "";
-              display: block;
-              width: 24px;
-              height: 24px;
-              background-color: #66bfcd;
-              border-radius: 50%;
-            }
-            &:before {
-              content: "";
-              display: block;
-              content: "";
-              position: absolute;
-              right: 15px;
-              border: 7px solid transparent;
-              border-top: 10px solid #fff;
-              transform: rotate(-90deg);
-            }
-
-            &.empty {
-              &:before {
-                display: none;
-              }
-
-              &:after {
-                display: none;
-              }
-            }
-            a {
-              font-size: 13px;
-              color: #00a2b1;
-              line-height: 1.07;
-            }
-          }
+        a {
+          color: #fff;
         }
       }
 
-      &-submenu {
-        display: none;
-        @include b(991) {
-          position: absolute;
-          top: 0;
-          right: -149px;
-          width: 100%;
-          max-width: 149px;
-          height: calc(100vh - 108px);
-          background-color: #66bfcd;
-          box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.95);
+      &:after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-color: #66bfcd;
+        border-radius: 50%;
+      }
+      &:before {
+        content: "";
+        display: block;
+        content: "";
+        position: absolute;
+        right: 15px;
+        border: 7px solid transparent;
+        border-top: 10px solid #fff;
+        transform: rotate(-90deg);
+      }
 
-          &.open {
-            display: block;
-          }
+      &.empty {
+        &:before {
+          display: none;
+        }
 
-          li {
-            padding: 15px 15px 15px 19px;
-            a {
-              color: #fff;
-            }
-          }
+        &:after {
+          display: none;
+        }
+      }
+      a {
+        font-size: 13px;
+        color: #00a2b1;
+        line-height: 1.07;
+      }
+    }
+  }
+
+  &__submenu {
+    display: none;
+    @include b(991) {
+      position: absolute;
+      top: 0;
+      right: -149px;
+      width: 100%;
+      max-width: 149px;
+      height: calc(100vh - 108px);
+      background-color: #66bfcd;
+      box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.95);
+
+      // &.open {
+      //   display: block;
+      // }
+
+      li {
+        padding: 15px 15px 15px 19px;
+        a {
+          color: #fff;
         }
       }
     }

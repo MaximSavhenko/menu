@@ -1,66 +1,92 @@
-.header {
-  padding: 22px 0;
-  position: fixed;
-  width: 100%;
-  .toggleMenu {
-    display: none;
+.mobile-number-menu-container {
+  .mobile-menu-region {
     @include b(991) {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 40px;
-      position: relative;
-      span {
-        @include trs;
-        width: 24px;
-        height: 3px;
-        background-color: #66bfcd;
-        display: block;
-        margin-bottom: 5px;
-        &:last-child {
-          margin-bottom: 0;
-        }
-        @include b(500) {
-          width: 30px;
-          height: 2px;
-        }
+      justify-content: space-between;
+      background-color: #fff;
+    }
+    .views-exposed-form {
+      @include b(991) {
+        display: none;
       }
-  
-      &.open {
-        p {
-          margin: auto 0;
-          width: 60px;
-          height: 40px;
-          position: relative;
-        }
-        span {
-          position: absolute;
-          top: 0;
-          left: 10px;
-          width: 24px;
-  
-          &:nth-child(1) {
-            top: 18px;
-            transform: rotate(-45deg);
-            background-color: #4ec4c0;
-          }
-  
-          &:nth-child(2) {
-            display: none;
-          }
-  
-          &:nth-child(3) {
-            top: 18px;
-            transform: rotate(45deg);
-            background-color: #4ec4c0;
+    }
+    #block-phonenumber , #block-emailbutton , #block-togglesearch {
+      @include b(991) {
+        display: none;
+      }
+    } 
+    #block-entertainment-branding {
+      @include b(991) {
+        background-color: #fff;
+        width: auto;
+        flex: 0 0 auto;
+      }
+    }
+    #block-drawermenubutton {
+      display: none;
+      @include b(991) {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      .header__btn-menu {
+        .toggleMenu {
+          display: none;
+          @include b(991) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            position: relative;
+            span {
+              @include trs;
+              width: 24px;
+              height: 3px;
+              background-color: #66bfcd;
+              display: block;
+              margin-bottom: 5px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              @include b(500) {
+                width: 30px;
+                height: 2px;
+              }
+            }
+        
+            &.open {
+              p {
+                margin: auto 0 !important;
+                width: 60px;
+                height: 40px;
+                position: relative;
+              }
+              span {
+                position: absolute;
+                top: 0;
+                left: 10px;
+                width: 24px;
+        
+                &:nth-child(1) {
+                  top: 18px;
+                  transform: rotate(-45deg);
+                  background-color: #4ec4c0;
+                }
+        
+                &:nth-child(2) {
+                  display: none;
+                }
+        
+                &:nth-child(3) {
+                  top: 18px;
+                  transform: rotate(45deg);
+                  background-color: #4ec4c0;
+                }
+              }
+            }
           }
         }
       }
     }
-  }
-
-  &__wrapp {
-    display: flex;
-    justify-content: space-between;
   }
 }
