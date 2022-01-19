@@ -1,6 +1,6 @@
 jQuery(function () {
   function burgerToggle() {
-    let btnMenu = $(".header__btn-menu"),
+    let btnMenu = $(".toggleMenu"),
       burger = $(".mobile-menu");
 
     btnMenu.on('click' , function () {
@@ -41,8 +41,8 @@ jQuery(function () {
 
       $(document).on("click", function (e) {
         let subm = $(".mobile-menu__submenu"),
-          burger = $(".mobile-menu"),
-          btnMenu = $(".header__btn-menu");
+            burger = $(".mobile-menu"),
+            btnMenu = $(".toggleMenu")
         if (
           !menu.is(e.target) &&
           menu_mobile.has(e.target).length === 0 &&
@@ -51,6 +51,7 @@ jQuery(function () {
           !btnMenu.is(e.target) &&
           btnMenu.has(e.target).length === 0
         ) {
+          btnMenu.removeClass('open')
           burger.removeClass("open");
           closeMenu();
         }
