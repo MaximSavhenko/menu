@@ -32,6 +32,29 @@
       li {
         cursor: pointer;
       }
+      &.green_color {
+        .mobile-menu__link {
+          &:after {
+            background-color: #50AF31;
+          }
+          &:hover {
+            background-color: #50AF31;
+            &::after {
+              background-color: #fff;
+            }
+            &:before {
+              border-top-color: #50AF31;
+            }
+            a {
+              color: #fff;
+            }
+          }
+
+          ul {
+            background-color: #50AF31;
+          }
+        }
+      }
     }
   }
 
@@ -118,5 +141,23 @@
 .mobile-number-menu-container {
   @include b(991) {
     padding: 22px 0 !important;
+  }
+}
+
+.stickyMenuWrapper {
+  @include b(991) {
+    padding-bottom: 0 !important;
+  }
+}
+
+.node .overlapping-hero .image-top {
+  @include b(991) {
+    margin-top: 0 !important;
+  }
+}
+
+.primary-menu-container {
+  @include b(991) {
+    margin-top: 0 !important;
   }
 }
